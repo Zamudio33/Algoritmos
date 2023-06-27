@@ -9,20 +9,20 @@ h1{
     font-size: 60px;
 }
 button{
-    padding: 6px 20px;
+    padding: 7px 35px;
     background: #0e0e47;
     border: 1px solid #fffefe;
     color: #fcfcfc;
     font-size: 26px;
     margin: 10px;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: .5s;
 }
 
 button:hover{
     background: transparent;
-    color: #14e248;
+    color: #edf3ef;
     border: 1px solid #ffffff;
     border-radius: 0;
 }

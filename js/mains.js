@@ -77,18 +77,14 @@ function Menor(){
 
 function Par(){
     let A = 0;
-    alert("Por favor ingrese número");
-    A = parseInt(promt(""));
-    if (A==0){
-        alert("El número cero no es par ni impar");
+  
+    A = parseInt(prompt("Ingrese un número"));
+  
+    if (A % 2 === 0) {
+      alert(A + " es un número par");
+    } else {
+      alert(A + " es un número impar");
     }
-    else if (A%2){
-        alert("El número es impar");
-    }
-    else{
-        alert("El número es par");
-    }
-    alert("El número menor es "+M);
 }
 
 function Cuadrado(){
@@ -141,31 +137,35 @@ function Capital(){
     alert("Su ganancia total es: " + GA);
 
 }
-function Colegio(){
-    let E ="";
-    let M ="";
-    let N1 = 0;
-    let N2 = 0;
-    let N3 = 0;
-    let N4 = 0;
-    let N5 = 0;
-    let N6 = 0;
-    let N7 = 0;
-    let Nota =0;
-    alert("Por favor ingrese el nombre del alumno");
-    E = parseInt(prompt(""));
-    alert("Por favor ingrese la materia");
-    M = ("");
-    alert("Por favor ingrese las 7 Notas");
-    N1,N2,N3,N4,N5,N6,N7 = parseInt(prompt(""));
-    Nota = N1+N2+N3+N4+N5+N6+N7/7;
-    if (Nota>6.1){
-        alert("El alumno aprobo con la nota: " + Nota);
+
+function Notas(){
+    let estudiante = "";
+    let materia = "";
+    let notas = [];
+  
+    estudiante = prompt("Ingrese el nombre del estudiante");
+    materia = prompt("Ingrese el nombre de la materia");
+  
+    for (let i = 1; i <= 7; i++) {
+      let nota = parseFloat(prompt("Ingrese la nota " + i));
+      notas.push(nota);
     }
-    else if (Nota<6.1){
-        alert("El alumno reprobo con la nota: " + Nota);
+  
+    let promedio = calcularPromedioNotas(notas);
+    let mensaje = estudiante + " ha " + (promedio >= 6.1 ? "aprobado" : "reprobado") + " " + materia + " con un promedio de " + promedio.toFixed(2);
+  
+    alert(mensaje);
+  }
+  
+  function calcularPromedioNotas(notas) {
+    let suma = 0;
+  
+    for (let i = 0; i < notas.length; i++) {
+      suma += notas[i];
     }
-}
+  
+    return suma / notas.length;
+  }
 
 function Manzanas(){
     let peso = 0;
